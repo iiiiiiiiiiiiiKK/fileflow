@@ -336,14 +336,17 @@ Last verified run (production build, Chromium 1.64): **120/120 unit tests**, **4
 ## 📦 Build output
 
 ```
-dist/index.html                     2.8 kB   │ gzip  1.3 kB
-dist/assets/index-*.css            39.9 kB   │ gzip  7.9 kB
-dist/assets/parsing-*.js           18.9 kB   │ gzip  7.0 kB   (Papa Parse)
-dist/assets/zip-*.js               97.3 kB   │ gzip 31.2 kB   (JSZip, lazy)
-dist/assets/index-*.js            135.2 kB   │ gzip 42.6 kB
-dist/assets/react-*.js            141.9 kB   │ gzip 45.5 kB
-dist/assets/import.worker-*.js     27.5 kB   │ gzip  ~8 kB   (Worker)
+dist/index.html                     2.75 kB  │ gzip  1.29 kB
+dist/assets/index-*.css            38.94 kB  │ gzip  7.79 kB
+dist/assets/parsing-*.js           18.85 kB  │ gzip  6.96 kB   (Papa Parse, lazy)
+dist/assets/zip-*.js               97.26 kB  │ gzip 30.16 kB   (JSZip, lazy)
+dist/assets/index-*.js            133.87 kB  │ gzip 42.22 kB
+dist/assets/react-*.js            141.85 kB  │ gzip 45.52 kB
+dist/assets/import.worker-*.js     28.04 kB  │ gzip  ~8 kB     (Worker)
 ```
+
+Total payload for a first visit is ~100 kB gzipped; the ZIP library is only fetched when you
+actually export an archive.
 
 The build is fully static and path-relative (`base: './'`), so it works from a project page
 (`/fileflow/`), a custom domain root, or any subdirectory of any static host.
