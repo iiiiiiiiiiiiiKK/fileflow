@@ -1,0 +1,12 @@
+{
+  "project": "FileFlow",
+  "tags": ["csv", "json", "jsonl"],
+  "meta": {
+    "nested": true,
+    "depth": 3,
+    "list": [1, 2, 3]
+  },
+  "count": 42,
+  "active": true,
+  "empty": null
+}

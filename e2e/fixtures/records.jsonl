@@ -1,0 +1,4 @@
+{"id":1,"name":"Ada","active":true,"tags":["a"]}
+{"id":2,"name":"Grace","active":false,"tags":["b","c"]}
+this line is not json
+{"id":3,"name":"小明","active":true,"tags":[]}
